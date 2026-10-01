@@ -41,7 +41,30 @@
 
             // task 4 
 
+            /*Console.WriteLine("Введите число: ");
+            int n = int.Parse(Console.ReadLine());
 
+            for (int i = 1; i <= n; i++) {
+                    Console.WriteLine(i);
+                }*/
+
+            // task 5
+
+
+            static int Max(int a, int b)
+            {
+                if (a > b)
+                {
+                    return a;
+                }
+
+                else 
+                {
+                    return b;
+                }
+            }
+
+            Console.WriteLine("Наибольшее число: " + Max(15, 15));
         }
     }
 }
