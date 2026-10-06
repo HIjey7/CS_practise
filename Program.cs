@@ -1,4 +1,6 @@
-﻿namespace Practise1
+﻿using Practise1.Tasks;
+
+namespace Practise1
 {
     internal class Program
     {
@@ -7,6 +9,9 @@
             // Loops.Task1();
             // Loops.Task2();
             // Loops.Task3();
+            // Conditions.Task8();
+            // Conditions.Task9();
+            Conditions.Task10();
         }
     }
 }

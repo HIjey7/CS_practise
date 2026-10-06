@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practise1
+namespace Practise1.Tasks
 {
     internal class Loops
     {
@@ -54,8 +54,6 @@ namespace Practise1
                     count += 1;
                 }
             }
-
-            Console.WriteLine(count);
         }
     }
 }
