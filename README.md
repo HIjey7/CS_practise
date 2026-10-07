@@ -22,7 +22,8 @@ Practise1/
 └── Tasks/
     ├── Loops.cs        // циклы for
     ├── Conditions.cs   // if / else if / else + циклы
-    └── Arrays.cs       // массивы
+    ├── Arrays.cs       // массивы
+    └── ArraysMethods.cs    // методы с параметрами
 ```
 
 Каждая задача это отдельный `public static` метод. В `Main` вызывается только нужный:
