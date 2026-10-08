@@ -18,7 +18,7 @@ namespace Practise1
             // Arrays.Task14();
 
             //FindMax | FindMin
-            int[] dig = [1, 3, 1, 1, 2];
+            int[] dig = [4, 8, 15];
 
             Console.WriteLine("Массив: ");
 
@@ -38,6 +38,9 @@ namespace Practise1
 
             // CountEquals
             Console.WriteLine("Кол-во 'x' в массиве: " + ArraysMethods.CountEqual(dig, 5));
+
+            // Contains
+            Console.WriteLine($"Наличие 'x' в массиве: " + ArraysMethods.Contains(dig, 8));
         }
     }
 }

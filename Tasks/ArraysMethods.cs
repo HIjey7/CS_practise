@@ -112,5 +112,26 @@ namespace Practise1.Tasks
 
             return count;
         }
+
+        public static bool Contains(int[] dig, int x)
+        {
+            // используем тот же массив dig[]
+            // проходим циклом по массиву
+            // условие: если dig[i] == x, то возвращаем true
+            // если в цикле ничего не нашли, то возвращаем false
+
+            for (int i = 0; i < dig.Length; i++)
+            {
+                if (dig[i] == x)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+            }
+
+            //return false;
+        }
     }
 }
