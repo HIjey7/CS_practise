@@ -18,11 +18,12 @@
 
 ```
 Practise1/
-├── Program.cs          // только Main и вызовы
+├── Program.cs              // только Main и вызовы
 └── Tasks/
-    ├── Loops.cs        // циклы for
-    ├── Conditions.cs   // if / else if / else + циклы
-    └── Arrays.cs       // массивы
+    ├── Loops.cs            // циклы for
+    ├── Conditions.cs       // if / else if / else + циклы
+    ├── Arrays.cs           // массивы
+    └── ArraysMethods.cs    // методы с параметрами
 ```
 
 Каждая задача это отдельный `public static` метод. В `Main` вызывается только нужный:
