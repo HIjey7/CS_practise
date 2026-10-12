@@ -125,13 +125,54 @@ namespace Practise1.Tasks
                 if (dig[i] == x)
                 {
                     return true;
-                } else
-                {
-                    return false;
                 }
             }
 
-            //return false;
+            return false;
+        }
+
+
+        public static int SumEvenIndex(int[] mass)
+        {
+            // создать массив, в котором 8 целых чисел
+            // создать метод с параметрами int[] mass
+            // создать переменную суммы
+            // пройтись циклом по массиву
+            // условие: если индекс массива четный и элемент под этим индексом больше 5
+            // то сумма = сумма + этот элемент
+            // возвращаем сумму
+
+            int sum = 0;
+
+            for (int i = 0; i < mass.Length; i++)
+            {
+                if ( i %  2 == 0 &&  mass[i] > 5)
+                {
+                    sum += mass[i];
+                }
+            }
+
+            return sum;
+        }
+
+        public static int IndexFirstElEqualTarget(int[] dig, int target)
+        {
+            // создаем массив int[] dig
+            // создаем метод, в который передаем сам массив и target
+            // проходим циклом по массиву
+            // условие: если элемент в массиве равен таргету
+            // то возвращаем i
+            // return -1 после цикла если условие в цикле не выполнится
+
+            for (int i = 0; i < dig.Length; i++)
+            {
+                if (dig[i] == target)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
     }
 }
