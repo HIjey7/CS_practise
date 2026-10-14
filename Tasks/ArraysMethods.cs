@@ -174,5 +174,74 @@ namespace Practise1.Tasks
 
             return -1;
         }
+
+            public static int SumFromTo(int[] mass, int from, int to)
+            {
+            // заводим переменную суммы = 0
+            // условие: если from больше чем to, то возвращаем -1
+            // проходим циклом по массиву
+            // если элемент массива больше либо равен from и меньше либо равен to, то закидываем элемент в сумму
+            // возвращаем sum
+
+            int sum = 0;
+
+                if (from > to)
+                {
+                    return -1;
+                }
+
+                for (int i = 0; i < mass.Length; i++)
+                {
+                        if (from <= mass[i] && mass[i] <= to)
+                        {
+                            sum += mass[i];
+                        }
+                }
+
+                return sum;
+
+            } 
+
+        public static bool IsPositive(int value)
+        {
+            return (value > 0);
+        }
+
+
+        public static bool EvenParamInNums(int[] nums, int k)
+        {
+            // создаем метод IsPositive который возвращаем value > 0
+            // заводим переменную счетчик
+            // проверка если k равно 0 то возвращаем false
+            // проходим циклом по массиву
+            // если k > 0 то мы проверям положительный ли элемент массива и прибавляем к счетчику 1
+            // если счетчик равен к, то возвращаем True
+            // возвращаем false
+
+            int count = 0;
+            
+            if (k == 0)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < nums.Length; i++) 
+            {
+                if (k > 0)
+                {
+                    if (IsPositive(nums[i]))
+                    {
+                        count++;
+                    }
+
+                    if (count == k)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
     }
 }

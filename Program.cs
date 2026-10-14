@@ -48,10 +48,23 @@ namespace Practise1
             //Console.WriteLine("Сумма элементом четных индексов, где элементы > 5: " + ArraysMethods.SumEvenIndex(mass));
 
             //
-            int[] dig = [5, 5, 9, 13, 5, 4, 0];
+            //int[] dig = [5, 5, 9, 13, 5, 4, 0];
 
-            Console.WriteLine(ArraysMethods.IndexFirstElEqualTarget(dig, 5));
-            Console.WriteLine(ArraysMethods.IndexFirstElEqualTarget(dig, 4));
+            //Console.WriteLine(ArraysMethods.IndexFirstElEqualTarget(dig, 5));
+            //Console.WriteLine(ArraysMethods.IndexFirstElEqualTarget(dig, 4));
+
+            //int[] mass = [15, 49, 7, 0, 4, -10, 121];
+
+            //Console.WriteLine(ArraysMethods.SumFromTo(mass, 1, 50));
+            //Console.WriteLine(ArraysMethods.SumFromTo(new int[] { 5, 5, 3 }, 5, 5)); 
+            //Console.WriteLine(ArraysMethods.SumFromTo(mass, 101, 9));
+
+            int[] nums = [-10, 5, 0, -3, 12, 16, 90, 1, 5];
+
+            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 3)); // проверка работоспособности 
+            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 6)); // проверка равно k
+            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 7)); // проверка больше длины массива
+            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 0)); // проверка k = 0
         }
     }
 }
