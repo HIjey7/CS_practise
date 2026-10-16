@@ -61,10 +61,11 @@ namespace Practise1
 
             int[] nums = [-10, 5, 0, -3, 12, 16, 90, 1, 5];
 
-            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 3)); // проверка работоспособности 
-            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 6)); // проверка равно k
-            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 7)); // проверка больше длины массива
-            Console.WriteLine(ArraysMethods.EvenParamInNums(nums, 0)); // проверка k = 0
+            Console.WriteLine(ArraysMethods.PositivesNums(nums, 3)); // проверка работоспособности || ожидаю true
+            Console.WriteLine(ArraysMethods.PositivesNums(nums, 6)); // проверка равно k || ожидаю true
+            Console.WriteLine(ArraysMethods.PositivesNums(nums, 7)); // проверка больше длины массива || ожидаю false
+            Console.WriteLine(ArraysMethods.PositivesNums(nums, 0)); // проверка k = 0 || ожидаю false
+            Console.WriteLine(ArraysMethods.PositivesNums(new int[]  { }, 1)); 
         }
     }
 }

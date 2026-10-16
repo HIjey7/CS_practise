@@ -208,27 +208,25 @@ namespace Practise1.Tasks
         }
 
 
-        public static bool EvenParamInNums(int[] nums, int k)
+        public static bool PositivesNums(int[] nums, int k)
         {
             // создаем метод IsPositive который возвращаем value > 0
             // заводим переменную счетчик
-            // проверка если k равно 0 то возвращаем false
+            // проверка если k меньше равно 0 то возвращаем false
             // проходим циклом по массиву
-            // если k > 0 то мы проверям положительный ли элемент массива и прибавляем к счетчику 1
+            // проверям положительный ли элемент массива и прибавляем к счетчику 1
             // если счетчик равен к, то возвращаем True
             // возвращаем false
 
             int count = 0;
             
-            if (k == 0)
+            if (k <= 0)
             {
                 return false;
             }
 
             for (int i = 0; i < nums.Length; i++) 
             {
-                if (k > 0)
-                {
                     if (IsPositive(nums[i]))
                     {
                         count++;
@@ -238,7 +236,6 @@ namespace Practise1.Tasks
                     {
                         return true;
                     }
-                }
             }
 
             return false;
