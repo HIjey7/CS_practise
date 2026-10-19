@@ -59,13 +59,44 @@ namespace Practise1
             //Console.WriteLine(ArraysMethods.SumFromTo(new int[] { 5, 5, 3 }, 5, 5)); 
             //Console.WriteLine(ArraysMethods.SumFromTo(mass, 101, 9));
 
-            int[] nums = [-10, 5, 0, -3, 12, 16, 90, 1, 5];
+            //int[] nums = [-10, 5, 0, -3, 12, 16, 90, 1, 5];
 
-            Console.WriteLine(ArraysMethods.PositivesNums(nums, 3)); // проверка работоспособности || ожидаю true
-            Console.WriteLine(ArraysMethods.PositivesNums(nums, 6)); // проверка равно k || ожидаю true
-            Console.WriteLine(ArraysMethods.PositivesNums(nums, 7)); // проверка больше длины массива || ожидаю false
-            Console.WriteLine(ArraysMethods.PositivesNums(nums, 0)); // проверка k = 0 || ожидаю false
-            Console.WriteLine(ArraysMethods.PositivesNums(new int[]  { }, 1)); 
+            //Console.WriteLine(ArraysMethods.PositivesNums(nums, 3)); // проверка работоспособности || ожидаю true
+            //Console.WriteLine(ArraysMethods.PositivesNums(nums, 6)); // проверка равно k || ожидаю true
+            //Console.WriteLine(ArraysMethods.PositivesNums(nums, 7)); // проверка больше длины массива || ожидаю false
+            //Console.WriteLine(ArraysMethods.PositivesNums(nums, 0)); // проверка k = 0 || ожидаю false
+            //Console.WriteLine(ArraysMethods.PositivesNums(new int[]  { }, 1)); // проверка пустого массива и k = 1 || ожидаю false
+
+
+            //int[] nums = [7, 8, 9];
+            //Console.WriteLine(nums[0]);    // что здесь?
+            //ArraysMethods.SetFirstToZero(nums);
+            //Console.WriteLine(nums[0]);
+
+            //SetNegativeToZero
+            //int[] arr = [-3, 12, -9, -15, -100, 2, 17];
+
+            //ArraysMethods.PrintArray(arr);
+
+            //ArraysMethods.SetNegativeToZero(arr);
+            //ArraysMethods.PrintArray(arr);
+
+            //MultiplyAll
+            int[] arr = [1, 2, 3, 4];
+            int[] one = [3];
+
+            //ArraysMethods.PrintArray(arr);
+            //ArraysMethods.MultiplyAll(arr, 2);
+            //ArraysMethods.PrintArray(arr);
+
+            ArraysMethods.PrintArray(arr);
+            ArraysMethods.SwapFirstAndLast(arr);
+            ArraysMethods.PrintArray(arr);
+
+            ArraysMethods.SwapFirstAndLast(one);
+            ArraysMethods.PrintArray(one); // ожидаю: 3
+            ArraysMethods.SwapFirstAndLast(new int[] { }); // ожидаю: программа не падает
+
         }
     }
 }

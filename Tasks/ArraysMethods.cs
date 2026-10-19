@@ -240,5 +240,54 @@ namespace Practise1.Tasks
 
             return false;
         }
+
+        public static void SetFirstToZero(int[] arr)
+        {
+            arr[0] = 0;
+        }
+
+        public static void SetNegativeToZero(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < 0)
+                {
+                    arr[i] = 0;
+                }
+            }
+        }
+
+        public static void PrintArray(int[] arr)
+        {
+            for (int i = 0;i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        public static void MultiplyAll(int[] arr, int k)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] *= k;
+            }
+        }
+
+        public static void SwapFirstAndLast(int[] arr)
+        {
+            // если элементов меньше двух, то  выходим и ничего не делаем
+            // сохраняем первый эл массива во временную переменную
+            // записываем последний элемент в первый, а первый из временной переменной в последний
+
+                if (arr.Length < 2)
+                {
+                    return;
+                }
+
+                int temp = arr[0];
+                arr[0] = arr[arr.Length - 1];
+                arr[arr.Length - 1] = temp;
+        }
     }
 }
