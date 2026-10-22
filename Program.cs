@@ -1,4 +1,5 @@
 ﻿using Practise1.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace Practise1
 {
@@ -82,21 +83,36 @@ namespace Practise1
             //ArraysMethods.PrintArray(arr);
 
             //MultiplyAll
-            int[] arr = [1, 2, 3, 4];
-            int[] one = [3];
+            //int[] arr = [1, 2, 3, 4];
+            //int[] one = [3];
+
+            ////ArraysMethods.PrintArray(arr);
+            ////ArraysMethods.MultiplyAll(arr, 2);
+            ////ArraysMethods.PrintArray(arr);
 
             //ArraysMethods.PrintArray(arr);
-            //ArraysMethods.MultiplyAll(arr, 2);
+            //ArraysMethods.SwapFirstAndLast(arr);
             //ArraysMethods.PrintArray(arr);
 
-            ArraysMethods.PrintArray(arr);
-            ArraysMethods.SwapFirstAndLast(arr);
-            ArraysMethods.PrintArray(arr);
+            //ArraysMethods.SwapFirstAndLast(one);
+            //ArraysMethods.PrintArray(one); // ожидаю: 3
+            //ArraysMethods.SwapFirstAndLast(new int[] { }); // ожидаю: программа не падает
 
-            ArraysMethods.SwapFirstAndLast(one);
-            ArraysMethods.PrintArray(one); // ожидаю: 3
-            ArraysMethods.SwapFirstAndLast(new int[] { }); // ожидаю: программа не падает
 
+            //int[] digits = [14, 2, 0, -15, 20, 5, 7, -3];
+
+            //ArraysMethods.PrintArray(digits);
+
+            //ArraysMethods.ClampToRange(digits, -1, 10);
+            //ArraysMethods.PrintArray(digits);
+
+            int[] numbers = [9, -3, 5, 7, 0, 11, -7, -23, 90];
+            ArraysMethods.PrintArray(numbers);
+
+            //ArraysMethods.PrintArray(ArraysMethods.ReturnNewArr(numbers, -1, 11));
+
+            Console.WriteLine(ArraysMethods.CountOfRange(numbers, -1, 11));
+            
         }
     }
 }

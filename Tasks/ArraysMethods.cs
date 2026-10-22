@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Text;
 
 namespace Practise1.Tasks
@@ -288,6 +289,70 @@ namespace Practise1.Tasks
                 int temp = arr[0];
                 arr[0] = arr[arr.Length - 1];
                 arr[arr.Length - 1] = temp;
+        }
+
+        public static void ClampToRange(int[] digits, int min, int max)
+        {
+            // цикл по массиву
+            // если элемент массива меньше min то
+            // элемент массива = min
+            // иначе если элемент массива > max то
+            // заменяем на max
+            // остальные элементы не трогаем
+
+            for (int i = 0; i < digits.Length; i++)
+            {
+                if (digits[i] < min)
+                {
+                    digits[i] = min;
+                } else if (digits[i] > max)
+                {
+                    digits[i] = max;
+                }
+            }
+        }
+
+        public static int[] ReturnNewArr(int[] numbers, int min, int max)
+        {
+            // создаю массив, который берет размерность от исходного массива
+            // прохожусь циклом по массиву
+            // если эл масс < min 
+            // то записываю в новый массив min
+            // иначе если эл масс > max то записываю max
+            // иначе записываю сам элемент
+
+            int[] result = new int[numbers.Length];
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    result[i] = min;
+                } else if (numbers[i] > max)
+                {
+                    result[i] = max;
+                } else
+                {
+                    result[i] = numbers[i];
+                }
+            }
+
+            return result;
+        }
+
+        public static int CountOfRange(int[] numbers, int min, int max)
+        {
+            int count = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] < min || numbers[i] > max)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }
