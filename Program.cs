@@ -106,13 +106,53 @@ namespace Practise1
             //ArraysMethods.ClampToRange(digits, -1, 10);
             //ArraysMethods.PrintArray(digits);
 
-            int[] numbers = [9, -3, 5, 7, 0, 11, -7, -23, 90];
-            ArraysMethods.PrintArray(numbers);
+            //int[] numbers = [9, -3, 5, 7, 0, 11, -7, -23, 90];
+            //ArraysMethods.PrintArray(numbers);
 
-            //ArraysMethods.PrintArray(ArraysMethods.ReturnNewArr(numbers, -1, 11));
+            ////ArraysMethods.PrintArray(ArraysMethods.ReturnNewArr(numbers, -1, 11));
 
-            Console.WriteLine(ArraysMethods.CountOfRange(numbers, -1, 11));
-            
+            //Console.WriteLine(ArraysMethods.CountOutOfRange(numbers, -1, 11));
+
+
+            //Enemy Wolf = new Enemy("Wolk", 7);
+
+            //Wolf.TakeDamage(3);
+
+            //Wolf.TakeDamage(3);
+
+            //Console.WriteLine($"Здоровье врага {Wolf.Name} = {Wolf.Health} HP");
+
+            //Console.WriteLine($"Жив ли {Wolf.Name}? - {Wolf.IsAlive()}");
+
+            //Wolf.TakeDamage(-11);
+
+            //Console.WriteLine($"Теперь здоровье врага {Wolf.Name} = {Wolf.Health} HP");
+
+            //Console.WriteLine($"Жив ли {Wolf.Name}? - {Wolf.IsAlive()}");
+
+            //Wolf.TakeDamage(11);
+
+            //Console.WriteLine($"Теперь здоровье врага {Wolf.Name} = {Wolf.Health} HP");
+
+            //Console.WriteLine($"Жив ли {Wolf.Name}? - {Wolf.IsAlive()}");
+
+            Enemy ogre = new Enemy("Fiona", 250);
+
+            Weapon pistol = new Weapon("Пистолет", 25, 7);
+
+            Console.WriteLine($"Здоровье врага {ogre.Name} = {ogre.Health}");
+
+            Console.WriteLine($"Жив ли {ogre.Name}? - {ogre.IsAlive()}");
+
+            int i = 1;
+
+            while (pistol.Strength > 0)
+            {
+                int damage = pistol.UseWeapon();
+                ogre.TakeDamage(damage);
+                Console.WriteLine($"Выстрел {i}: здоровье {ogre.Name} = {ogre.Health} HP \n Прочность оружия: {pistol.Strength} \n Жив ли враг {ogre.Name}? - {ogre.IsAlive()}");
+                i++;
+            }
         }
     }
 }

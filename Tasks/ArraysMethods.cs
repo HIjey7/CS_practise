@@ -340,7 +340,7 @@ namespace Practise1.Tasks
             return result;
         }
 
-        public static int CountOfRange(int[] numbers, int min, int max)
+        public static int CountOutOfRange(int[] numbers, int min, int max)
         {
             int count = 0;
 
