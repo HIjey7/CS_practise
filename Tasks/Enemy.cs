@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Practise1.Tasks
 {
-    public class Enemy
+    public class Enemy : IDamageable
     {
         public string Name { get; }
         public int Health { get; private set; }
@@ -32,14 +32,8 @@ namespace Practise1.Tasks
 
         }
 
-        public bool IsAlive()
-        {
-            if (Health > 0)
-            {
-                return true;
-            }
+        public bool IsDestroyed => Health <= 0; // При Health = 100 IsDestroyed вернет 0
 
-            return false;
-        }
+
     }
 }

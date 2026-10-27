@@ -136,23 +136,45 @@ namespace Practise1
 
             //Console.WriteLine($"Жив ли {Wolf.Name}? - {Wolf.IsAlive()}");
 
-            Enemy ogre = new Enemy("Fiona", 250);
+            //Enemy ogre = new Enemy("Fiona", 250);
 
-            Weapon pistol = new Weapon("Пистолет", 25, 7);
+            //Weapon pistol = new Weapon("Пистолет", 25, 7);
 
-            Console.WriteLine($"Здоровье врага {ogre.Name} = {ogre.Health}");
+            //Console.WriteLine($"Здоровье врага {ogre.Name} = {ogre.Health}");
 
-            Console.WriteLine($"Жив ли {ogre.Name}? - {ogre.IsAlive()}");
+            //Console.WriteLine($"Жив ли {ogre.Name}? - {ogre.IsDestroyed}");
 
-            int i = 1;
+            //int i = 1;
 
-            while (pistol.Strength > 0)
-            {
-                int damage = pistol.UseWeapon();
-                ogre.TakeDamage(damage);
-                Console.WriteLine($"Выстрел {i}: здоровье {ogre.Name} = {ogre.Health} HP \n Прочность оружия: {pistol.Strength} \n Жив ли враг {ogre.Name}? - {ogre.IsAlive()}");
-                i++;
-            }
+            //while (pistol.Strength > 0)
+            //{
+            //    int damage = pistol.UseWeapon();
+            //    ogre.TakeDamage(damage);
+            //    Console.WriteLine($"Выстрел {i}: здоровье {ogre.Name} = {ogre.Health} HP \n Прочность оружия: {pistol.Strength} \n Уничтожен ли враг {ogre.Name}? - {ogre.IsDestroyed}");
+            //    i++;
+            //}
+
+            Barrel barrel = new Barrel(4);
+
+            Console.WriteLine($"Прочность бочки = {barrel.Durability} \n Уничтожена ли бочка? - {barrel.IsDestroyed}");
+
+            Console.WriteLine("Наносим урон бочке");
+            
+            barrel.TakeDamage(3);
+            
+            Console.WriteLine($"Прочность бочки = {barrel.Durability} \n Уничтожена ли бочка? - {barrel.IsDestroyed}");
+            
+            Console.WriteLine("Снова наносим урон бочке");
+            
+            barrel.TakeDamage(4);
+
+            Console.WriteLine($"Уничтожена ли бочка? - {barrel.IsDestroyed}");
+
+            Console.WriteLine("Снова наносим урон бочке");
+
+            barrel.TakeDamage(4); // ожидаю что сообщения о взрыве больше не будет
+
+            Console.WriteLine($"Уничтожена ли бочка? - {barrel.IsDestroyed}");
         }
     }
 }
