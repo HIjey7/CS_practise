@@ -32,5 +32,16 @@ namespace Practise1.Tasks
 
             return Damage;
         }
+
+        public void StrikeOnTarget(IDamageable target)
+        {
+            if (target.IsDestroyed)
+            {
+                Console.WriteLine("Цель уничтожена");
+                return;
+            }
+
+            target.TakeDamage(UseWeapon());
+        }
     }
 }

@@ -154,27 +154,63 @@ namespace Practise1
             //    i++;
             //}
 
-            Barrel barrel = new Barrel(4);
+            //Barrel barrel = new Barrel(4);
 
-            Console.WriteLine($"Прочность бочки = {barrel.Durability} \n Уничтожена ли бочка? - {barrel.IsDestroyed}");
+            //Console.WriteLine($"Прочность бочки = {barrel.Durability} \n Уничтожена ли бочка? - {barrel.IsDestroyed}");
 
-            Console.WriteLine("Наносим урон бочке");
+            //Console.WriteLine("Наносим урон бочке");
             
-            barrel.TakeDamage(3);
+            //barrel.TakeDamage(3);
             
-            Console.WriteLine($"Прочность бочки = {barrel.Durability} \n Уничтожена ли бочка? - {barrel.IsDestroyed}");
+            //Console.WriteLine($"Прочность бочки = {barrel.Durability} \n Уничтожена ли бочка? - {barrel.IsDestroyed}");
             
-            Console.WriteLine("Снова наносим урон бочке");
+            //Console.WriteLine("Снова наносим урон бочке");
             
-            barrel.TakeDamage(4);
+            //barrel.TakeDamage(4);
 
-            Console.WriteLine($"Уничтожена ли бочка? - {barrel.IsDestroyed}");
+            //Console.WriteLine($"Уничтожена ли бочка? - {barrel.IsDestroyed}");
 
-            Console.WriteLine("Снова наносим урон бочке");
+            //Console.WriteLine("Снова наносим урон бочке");
 
-            barrel.TakeDamage(4); // ожидаю что сообщения о взрыве больше не будет
+            //barrel.TakeDamage(4); // ожидаю что сообщения о взрыве больше не будет
 
-            Console.WriteLine($"Уничтожена ли бочка? - {barrel.IsDestroyed}");
+            //Console.WriteLine($"Уничтожена ли бочка? - {barrel.IsDestroyed}");
+        
+            Weapon pistol = new Weapon("Glock-18", 13, 10);
+            Enemy animal = new Enemy("Bear", 50);
+            Barrel barrel = new Barrel(15);
+
+            List<IDamageable> targets = new List<IDamageable>();
+            targets.Add(animal);
+            targets.Add(barrel);
+
+            foreach (IDamageable t in targets)
+            {
+                pistol.StrikeOnTarget(t);
+
+            }
+
+            Console.WriteLine($"Здоровье {animal.Name} = {animal.Health} HP");
+
+            Console.WriteLine($"Прочность barrel = {barrel.Durability}");
+
+            foreach (IDamageable t in targets)
+            {
+                pistol.StrikeOnTarget(t);
+
+            }
+
+            Console.WriteLine($"Здоровье {animal.Name} = {animal.Health} HP");
+
+            Console.WriteLine($"Прочность barrel = {barrel.Durability}");
+
+            //Console.WriteLine($"Наносим {pistol.Damage} единиц урона по цели - {animal.Name}");
+            //pistol.StrikeOnTarget(animal);
+            //Console.WriteLine($"Здоровье {animal.Name} = {animal.Health} HP");
+            //Console.WriteLine($"Наносим {pistol.Damage} единиц урона по цели - barrel");
+            //pistol.StrikeOnTarget(barrel);
+            //Console.WriteLine($"Прочность barrel = {barrel.Durability}");
+
         }
     }
 }
